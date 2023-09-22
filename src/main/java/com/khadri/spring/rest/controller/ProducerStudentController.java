@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RestStudentController {
+public class ProducerStudentController {
 
 	private static HashMap<Integer, String> hashMap = new HashMap<>();
 
@@ -29,7 +29,7 @@ public class RestStudentController {
 
 	@GetMapping(value = "/register/view")
 	public HashMap<Integer, String> readAllRegisteredStudents() {
-
+       System.out.println("Invoked readAllRegisteredStudents()");
 		return hashMap;
 	}
 
